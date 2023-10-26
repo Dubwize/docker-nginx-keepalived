@@ -38,8 +38,11 @@ RUN \
     nginx-mod-stream-geoip==${NGINX_VERSION} \
     nginx-mod-stream-geoip2==${NGINX_VERSION} \
     nginx-vim==${NGINX_VERSION} \
-    keepalived
+    keepalived \
+    keepalived-sample-config \
+    cp /etc/keepalived/keepalived.conf.sample /etc/keepalived/keepalived.conf
 # ports and volumes
 EXPOSE 80 443
 
-VOLUME /config
+VOLUME /config \
+      /etc/keepalived
