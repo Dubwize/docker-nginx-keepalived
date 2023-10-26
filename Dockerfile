@@ -45,5 +45,4 @@ RUN \
 # ports and volumes
 EXPOSE 80 443
 
-VOLUME /config \
-      /etc/keepalived
+VOLUME /config
