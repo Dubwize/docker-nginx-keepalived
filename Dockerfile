@@ -29,7 +29,6 @@ RUN \
     gnupg \
     memcached \
     keepalived \
-    keepalived-sample-config
     keepalived-sample-config \
     nginx-mod-http-brotli \
     nginx-mod-http-dav-ext \
