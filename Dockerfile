@@ -25,6 +25,7 @@ RUN \
     python3-dev && \
   echo "**** install runtime packages ****" && \
   apk add --no-cache \
+    openrc \
     fail2ban \
     gnupg \
     memcached \
