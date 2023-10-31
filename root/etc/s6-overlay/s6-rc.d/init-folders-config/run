@@ -1,0 +1,12 @@
+#!/usr/bin/with-contenv bash
+# shellcheck shell=bash
+
+# make our folders and links
+mkdir -p \
+    /config/{fail2ban,crontabs,dns-conf} \
+    /config/etc/letsencrypt/renewal-hooks \
+    /config/log/{fail2ban,letsencrypt,nginx} \
+    /config/nginx/proxy-confs \
+    /run/fail2ban
+rm -rf /etc/letsencrypt
+ln -s /config/etc/letsencrypt /etc/letsencrypt

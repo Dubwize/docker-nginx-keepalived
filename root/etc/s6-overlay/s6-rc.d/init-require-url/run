@@ -1,0 +1,8 @@
+#!/usr/bin/with-contenv bash
+# shellcheck shell=bash
+
+# check to make sure that the required variables are set
+if [[ -z "${URL}" ]]; then
+    echo "Please pass your URL as an environment variable in your docker run command. See docker info for more details."
+    sleep infinity
+fi
