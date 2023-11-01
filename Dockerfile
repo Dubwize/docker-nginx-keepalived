@@ -5,11 +5,11 @@ FROM ghcr.io/linuxserver/baseimage-alpine-nginx:3.18
 # set version label
 ARG BUILD_DATE
 ARG VERSION
-#ARG NGINX_VERSION
 ARG CERTBOT_VERSION
 LABEL build_version="Custom Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DATE}"
 LABEL maintainer="dubwize"
 
+# environment settings
 ENV DHLEVEL=2048 ONLY_SUBDOMAINS=false AWS_CONFIG_FILE=/config/dns-conf/route53.ini
 ENV S6_BEHAVIOUR_IF_STAGE2_FAILS=2
 
@@ -29,7 +29,6 @@ RUN \
     gnupg \
     memcached \
     keepalived \
-    keepalived-sample-config \
     nginx-mod-http-brotli \
     nginx-mod-http-dav-ext \
     nginx-mod-http-echo \
@@ -179,6 +178,7 @@ RUN \
 
 # copy local files
 COPY root/ /
+
 # ports and volumes
 EXPOSE 80 443
 VOLUME /config
