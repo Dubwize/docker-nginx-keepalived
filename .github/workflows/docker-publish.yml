@@ -3,7 +3,7 @@ name: Build Image
 on: [push, pull_request, workflow_dispatch]
 
 env:
-  ENDPOINT: "dubwize/docker-nginx-keepalived"
+  ENDPOINT: "dubwize/nginx-keepalived"
   BRANCH: "master"
 
 jobs:
