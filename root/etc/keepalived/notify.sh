@@ -9,12 +9,6 @@ Date:  $(date +'%d-%b-%Y %H:%M:%S')
 [INFO] Now $state
 
 EOF
-
-##        if [[ "$state" == "Master" ]]; then
-##                sudo systemctl restart lelastic
-##        else
-##                sudo systemctl stop lelastic
-##        fi
 }
 
 function main {
