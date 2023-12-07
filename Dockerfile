@@ -174,7 +174,7 @@ RUN \
   rm -rf \
     /tmp/* \
     $HOME/.cache \
-    $HOME/.cargo
+    #$HOME/.cargo
 
 # copy local files
 COPY root/ /
